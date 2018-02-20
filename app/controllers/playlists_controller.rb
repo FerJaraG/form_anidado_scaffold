@@ -21,6 +21,7 @@ class PlaylistsController < ApplicationController
 
   # GET /playlists/1/edit
   def edit
+    @usuarios = User.all.collect{|x| [x.name, x.id]}
   end
 
   # POST /playlists
